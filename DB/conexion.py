@@ -65,15 +65,14 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     disp_horaria BINARY(1) NOT NULL,
     disp_reloc BINARY(1) NOT NULL,
     habilidades VARCHAR(50) NOT NULL,
-    url VARCHAR(20) NULL,
-    portafolio VARCHAR(50) NULL,
+    url VARCHAR(20),
     titulo_prof VARCHAR(50) NOT NULL,
     educacion VARCHAR(50) NOT NULL,
     exp VARCHAR(50) NOT NULL,
     cv VARCHAR(20) NOT NULL,
     apto BINARY(1) NOT NULL
     );"""
-    
+
     try:
         cur = con.cursor()
         cur.execute(q0)

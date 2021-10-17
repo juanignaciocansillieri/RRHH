@@ -8,7 +8,7 @@ from DB import conexion as c
 
 class usuarios:
     
-    def __init__(self,nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,portafolio,titulo_prof,educacion,exp,cv,apto):
+    def __init__(self,nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto):
         self.nombre=nombre
         self.apellido=apellido
         self.dni=dni
@@ -20,7 +20,6 @@ class usuarios:
         self.disp_reloc=disp_reloc
         self.habilidades=habilidades
         self.url=url
-        self.portafolio=portafolio
         self.titulo_prof=titulo_prof
         self.educacion=educacion
         self.exp=exp
@@ -35,8 +34,8 @@ class usuarios:
         a=c.start_connection()
         cursor=a.cursor()
         try:
-            query = "INSERT INTO usuarios(nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,portafolio,titulo_prof,educacion,exp,cv,apto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-            values = (self.nombre,self.apellido,self.dni,self.mail,self.domicilio,self.foto,self.nacimiento,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.portafolio,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto)
+            query = "INSERT INTO usuarios(nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+            values = (self.nombre,self.apellido,self.dni,self.mail,self.domicilio,self.foto,self.nacimiento,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto)
             cursor.execute(query,values)
             a.commit()
             print("se dio alta usuario correctamente")
@@ -65,7 +64,7 @@ class usuarios:
     def mostrar_user(dni):
         a = c.start_connection()
         cursor = a.cursor()
-        query = ("SELECT nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,portafolio,titulo_prof,educacion,exp,cv,apto FROM usuarios WHERE dni=%s")
+        query = ("SELECT nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto FROM usuarios WHERE dni=%s")
         cursor.execute(query,dni)
         data = cursor.fetchall()
         a.commit()
@@ -86,7 +85,7 @@ class usuarios:
         c.close_connection(a)
 
 
-    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,portafolio,titulo_prof,educacion,exp,cv):
+    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv):
         a=c.start_connection()
         cursor=a.cursor()
         query = "SELECT idusuarios FROM usuarios WHERE dni=%s"
@@ -142,10 +141,6 @@ class usuarios:
             a.commit()
             query = "UPDATE usuarios SET apellido=%s WHERE idusuarios=%s"
             values = (apellido,idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET portafolio=%s WHERE idusuarios=%s"
-            values = (portafolio,idu)
             cursor.execute(query, values)
             a.commit()
             query = "UPDATE usuarios SET apellido=%s WHERE idusuarios=%s"
