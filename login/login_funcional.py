@@ -12,10 +12,12 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 #############################################
 
-from login import Ui_MainWindow 
+from login import Ui_MainWindow
+sys.path.append("C:\\RRHH\\DB\\")
+import conexion as con
 
 sys.path.append("C:\\RRHH\\main\\")
-from main import Modern 
+import main_func as m
 
 admin_user=True
 
@@ -46,23 +48,15 @@ class LoginWindow(QMainWindow):
             global admin_user
             user = self.ui.user_login_input.text()
             password = self.ui.pass_login_input.text()
-            usuario = l.log_in(user,password)
             
-            if usuario==1:
-                #inicia
-                admin_user=u.ver_tipo(user)
-                self.main = Modern()
+            if user=="admin" and password=="admin":
+                con.crear_tabla()
+                self.main = m.Modern()
                 self.close()
-            if usuario==2:
-                #no se encuentra dni
-                QtWidgets.QMessageBox.critical(self, "Error", "DNI Incorrecto")
+            else :
+                QtWidgets.QMessageBox.critical(self, "Error", "Datos incorrectos")
                 self.ui.user_login_input.setText("")
                 self.ui.pass_login_input.setText("")
-            if usuario==3:
-                #contraseña incorrecta
-                QtWidgets.QMessageBox.critical(self, "Error", "Contraseña Incorrecta")
-                self.ui.pass_login_input.setText("")
-
      
 if __name__ == "__main__":
     app = QApplication(sys.argv)
