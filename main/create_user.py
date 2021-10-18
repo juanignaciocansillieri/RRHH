@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'create_user.ui'
+# Form implementation generated from reading ui file 'crear_persona.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(898, 421)
+        MainWindow.resize(848, 398)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.frame_3 = QtWidgets.QFrame(self.frame_2)
-        self.frame_3.setGeometry(QtCore.QRect(20, 10, 861, 400))
+        self.frame_3.setGeometry(QtCore.QRect(0, 0, 851, 400))
         self.frame_3.setMaximumSize(QtCore.QSize(16777215, 400))
         self.frame_3.setStyleSheet("border-radius: 10px;\n"
 "background-color: #F9F3DF;\n"
@@ -100,7 +100,7 @@ class Ui_MainWindow(object):
 "")
         self.label_apellido.setObjectName("label_apellido")
         self.label_direccion = QtWidgets.QLabel(self.frame_3)
-        self.label_direccion.setGeometry(QtCore.QRect(229, 10, 90, 27))
+        self.label_direccion.setGeometry(QtCore.QRect(20, 130, 90, 27))
         self.label_direccion.setMaximumSize(QtCore.QSize(90, 16777215))
         font = QtGui.QFont()
         font.setFamily("Roboto")
@@ -160,7 +160,7 @@ class Ui_MainWindow(object):
 "")
         self.label_dni.setObjectName("label_dni")
         self.label_nacimiento = QtWidgets.QLabel(self.frame_3)
-        self.label_nacimiento.setGeometry(QtCore.QRect(20, 130, 151, 27))
+        self.label_nacimiento.setGeometry(QtCore.QRect(230, 10, 151, 27))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
@@ -204,7 +204,7 @@ class Ui_MainWindow(object):
 "")
         self.label_provincia.setObjectName("label_provincia")
         self.nacimiento_date = QtWidgets.QDateEdit(self.frame_3)
-        self.nacimiento_date.setGeometry(QtCore.QRect(20, 160, 170, 25))
+        self.nacimiento_date.setGeometry(QtCore.QRect(230, 40, 170, 25))
         self.nacimiento_date.setStyleSheet("\n"
 "background-color: #D7E9F7;\n"
 "border: 0.5px solid #c1c1c1;\n"
@@ -277,7 +277,7 @@ class Ui_MainWindow(object):
         self.dni_input.setPlaceholderText("")
         self.dni_input.setObjectName("dni_input")
         self.crear_btn = QtWidgets.QPushButton(self.frame_3)
-        self.crear_btn.setGeometry(QtCore.QRect(670, 340, 121, 26))
+        self.crear_btn.setGeometry(QtCore.QRect(690, 360, 121, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
@@ -295,7 +295,7 @@ class Ui_MainWindow(object):
 "}")
         self.crear_btn.setObjectName("crear_btn")
         self.direccion_input = QtWidgets.QLineEdit(self.frame_3)
-        self.direccion_input.setGeometry(QtCore.QRect(230, 40, 170, 25))
+        self.direccion_input.setGeometry(QtCore.QRect(21, 160, 170, 25))
         self.direccion_input.setMinimumSize(QtCore.QSize(0, 0))
         self.direccion_input.setMaximumSize(QtCore.QSize(16777215, 25))
         self.direccion_input.setStyleSheet("\n"
@@ -346,44 +346,6 @@ class Ui_MainWindow(object):
         self.telefono_input.setText("")
         self.telefono_input.setPlaceholderText("")
         self.telefono_input.setObjectName("telefono_input")
-        self.titulo_input = QtWidgets.QLineEdit(self.frame_3)
-        self.titulo_input.setGeometry(QtCore.QRect(20, 280, 170, 100))
-        self.titulo_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.titulo_input.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.titulo_input.setStyleSheet("\n"
-"background-color: #D7E9F7;\n"
-"border: 0.5px solid #c1c1c1;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: #000;\n"
-"font-family:Roboto;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"\n"
-"")
-        self.titulo_input.setText("")
-        self.titulo_input.setPlaceholderText("")
-        self.titulo_input.setObjectName("titulo_input")
-        self.educacion_input = QtWidgets.QLineEdit(self.frame_3)
-        self.educacion_input.setGeometry(QtCore.QRect(230, 280, 170, 100))
-        self.educacion_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.educacion_input.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.educacion_input.setStyleSheet("\n"
-"background-color: #D7E9F7;\n"
-"border: 0.5px solid #c1c1c1;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: #000;\n"
-"font-family:Roboto;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"\n"
-"")
-        self.educacion_input.setText("")
-        self.educacion_input.setPlaceholderText("")
-        self.educacion_input.setObjectName("educacion_input")
         self.label_educacion = QtWidgets.QLabel(self.frame_3)
         self.label_educacion.setGeometry(QtCore.QRect(230, 250, 90, 27))
         self.label_educacion.setMaximumSize(QtCore.QSize(90, 16777215))
@@ -521,7 +483,7 @@ class Ui_MainWindow(object):
 "")
         self.label_experiencia.setObjectName("label_experiencia")
         self.cargarCV_btn = QtWidgets.QPushButton(self.frame_3)
-        self.cargarCV_btn.setGeometry(QtCore.QRect(650, 280, 70, 26))
+        self.cargarCV_btn.setGeometry(QtCore.QRect(650, 310, 70, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
@@ -539,7 +501,7 @@ class Ui_MainWindow(object):
 "}")
         self.cargarCV_btn.setObjectName("cargarCV_btn")
         self.subirFoto_btn = QtWidgets.QPushButton(self.frame_3)
-        self.subirFoto_btn.setGeometry(QtCore.QRect(750, 280, 70, 26))
+        self.subirFoto_btn.setGeometry(QtCore.QRect(740, 310, 70, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
@@ -586,27 +548,8 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_habilidades.setObjectName("label_habilidades")
-        self.habilidades_input = QtWidgets.QLineEdit(self.frame_3)
-        self.habilidades_input.setGeometry(QtCore.QRect(650, 40, 170, 100))
-        self.habilidades_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.habilidades_input.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.habilidades_input.setStyleSheet("\n"
-"background-color: #D7E9F7;\n"
-"border: 0.5px solid #c1c1c1;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: #000;\n"
-"font-family:Roboto;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"\n"
-"")
-        self.habilidades_input.setText("")
-        self.habilidades_input.setPlaceholderText("")
-        self.habilidades_input.setObjectName("habilidades_input")
         self.label_apto = QtWidgets.QLabel(self.frame_3)
-        self.label_apto.setGeometry(QtCore.QRect(650, 186, 158, 31))
+        self.label_apto.setGeometry(QtCore.QRect(650, 230, 158, 27))
         self.label_apto.setMaximumSize(QtCore.QSize(500, 16777215))
         font = QtGui.QFont()
         font.setFamily("Roboto")
@@ -620,11 +563,93 @@ class Ui_MainWindow(object):
 "")
         self.label_apto.setObjectName("label_apto")
         self.radioButton_si = QtWidgets.QRadioButton(self.frame_3)
-        self.radioButton_si.setGeometry(QtCore.QRect(660, 220, 41, 21))
+        self.radioButton_si.setGeometry(QtCore.QRect(660, 270, 41, 20))
         self.radioButton_si.setObjectName("radioButton_si")
         self.radioButton_no = QtWidgets.QRadioButton(self.frame_3)
-        self.radioButton_no.setGeometry(QtCore.QRect(710, 220, 51, 21))
+        self.radioButton_no.setGeometry(QtCore.QRect(710, 270, 41, 21))
         self.radioButton_no.setObjectName("radioButton_no")
+        self.label_profesion = QtWidgets.QLabel(self.frame_3)
+        self.label_profesion.setGeometry(QtCore.QRect(650, 170, 158, 27))
+        self.label_profesion.setMaximumSize(QtCore.QSize(500, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.label_profesion.setFont(font)
+        self.label_profesion.setStyleSheet("font-family: Roboto;\n"
+"font-size: 14px;\n"
+"margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
+"")
+        self.label_profesion.setObjectName("label_profesion")
+        self.profesion_input = QtWidgets.QLineEdit(self.frame_3)
+        self.profesion_input.setGeometry(QtCore.QRect(650, 200, 170, 25))
+        self.profesion_input.setMinimumSize(QtCore.QSize(0, 0))
+        self.profesion_input.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.profesion_input.setStyleSheet("\n"
+"background-color: #D7E9F7;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: #000;\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"")
+        self.profesion_input.setText("")
+        self.profesion_input.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.profesion_input.setPlaceholderText("")
+        self.profesion_input.setObjectName("profesion_input")
+        self.habilidades_input = QtWidgets.QTextEdit(self.frame_3)
+        self.habilidades_input.setGeometry(QtCore.QRect(650, 40, 170, 100))
+        self.habilidades_input.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.habilidades_input.setStyleSheet("\n"
+"background-color: #D7E9F7;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: #000;\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"")
+        self.habilidades_input.setObjectName("habilidades_input")
+        self.educacion_input = QtWidgets.QTextEdit(self.frame_3)
+        self.educacion_input.setGeometry(QtCore.QRect(230, 280, 170, 100))
+        self.educacion_input.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.educacion_input.setStyleSheet("\n"
+"background-color: #D7E9F7;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: #000;\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"")
+        self.educacion_input.setObjectName("educacion_input")
+        self.titulo_input = QtWidgets.QTextEdit(self.frame_3)
+        self.titulo_input.setGeometry(QtCore.QRect(20, 280, 170, 100))
+        self.titulo_input.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.titulo_input.setStyleSheet("\n"
+"background-color: #D7E9F7;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: #000;\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"")
+        self.titulo_input.setObjectName("titulo_input")
         self.verticalLayout.addWidget(self.frame_2)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -634,10 +659,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_mail.setText(_translate("MainWindow", "Mail"))
+        self.label_mail.setText(_translate("MainWindow", "Puesto"))
         self.label_localidad.setText(_translate("MainWindow", "Localidad"))
         self.label_apellido.setText(_translate("MainWindow", "Apellido"))
-        self.label_direccion.setText(_translate("MainWindow", "Dirección"))
+        self.label_direccion.setText(_translate("MainWindow", "Domicilio"))
         self.label_nombre.setText(_translate("MainWindow", "Nombre"))
         self.label_dni.setText(_translate("MainWindow", "DNI"))
         self.label_nacimiento.setText(_translate("MainWindow", "Fecha de nacimiento"))
@@ -651,7 +676,7 @@ class Ui_MainWindow(object):
         self.comboBox_relocalizarse.setItemText(0, _translate("MainWindow", "Sí"))
         self.comboBox_relocalizarse.setItemText(1, _translate("MainWindow", "No"))
         self.label_relocalizarse.setText(_translate("MainWindow", "¿Puede relocalizarse?"))
-        self.label_url.setText(_translate("MainWindow", "URL"))
+        self.label_url.setText(_translate("MainWindow", "Mail"))
         self.labe_titulo.setText(_translate("MainWindow", "Título(s) Profesional(es)"))
         self.label_experiencia.setText(_translate("MainWindow", "Experiencia"))
         self.cargarCV_btn.setText(_translate("MainWindow", "Cargar CV"))
@@ -660,6 +685,7 @@ class Ui_MainWindow(object):
         self.label_apto.setText(_translate("MainWindow", "Apto"))
         self.radioButton_si.setText(_translate("MainWindow", "Sí"))
         self.radioButton_no.setText(_translate("MainWindow", "No"))
+        self.label_profesion.setText(_translate("MainWindow", "URL"))
 
 
 if __name__ == "__main__":

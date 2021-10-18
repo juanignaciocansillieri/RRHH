@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>848</width>
-    <height>398</height>
+    <width>849</width>
+    <height>630</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -60,13 +60,13 @@
          <x>0</x>
          <y>0</y>
          <width>851</width>
-         <height>400</height>
+         <height>631</height>
         </rect>
        </property>
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>400</height>
+         <height>665</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -80,11 +80,11 @@ background-color: #F9F3DF;
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="label_mail">
+       <widget class="QLabel" name="label_puesto">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>190</y>
+          <x>221</x>
+          <y>400</y>
           <width>158</width>
           <height>27</height>
          </rect>
@@ -116,8 +116,8 @@ margin-left:10px
        <widget class="QLabel" name="label_localidad">
         <property name="geometry">
          <rect>
-          <x>229</x>
-          <y>70</y>
+          <x>220</x>
+          <y>280</y>
           <width>90</width>
           <height>27</height>
          </rect>
@@ -150,8 +150,8 @@ margin-left:10px
        <widget class="QLineEdit" name="apellido_input">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>100</y>
+          <x>10</x>
+          <y>310</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -190,8 +190,8 @@ margin-left: 10px;
        <widget class="QLabel" name="label_apellido">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>70</y>
+          <x>10</x>
+          <y>280</y>
           <width>67</width>
           <height>27</height>
          </rect>
@@ -217,8 +217,8 @@ margin-left:10px
        <widget class="QLabel" name="label_direccion">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>130</y>
+          <x>10</x>
+          <y>340</y>
           <width>90</width>
           <height>27</height>
          </rect>
@@ -250,8 +250,8 @@ margin-left:10px
        <widget class="QLabel" name="label_nombre">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>10</y>
+          <x>10</x>
+          <y>220</y>
           <width>71</width>
           <height>27</height>
          </rect>
@@ -277,8 +277,8 @@ margin-left:10px
        <widget class="QLineEdit" name="nombre_input">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>40</y>
+          <x>10</x>
+          <y>250</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -320,8 +320,8 @@ margin-left: 10px;
        <widget class="QLabel" name="label_dni">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>190</y>
+          <x>10</x>
+          <y>400</y>
           <width>71</width>
           <height>27</height>
          </rect>
@@ -347,8 +347,8 @@ margin-left:10px
        <widget class="QLabel" name="label_nacimiento">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>10</y>
+          <x>220</x>
+          <y>220</y>
           <width>151</width>
           <height>27</height>
          </rect>
@@ -374,8 +374,8 @@ margin-left:10px
        <widget class="QLineEdit" name="provincia_input">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>160</y>
+          <x>221</x>
+          <y>370</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -413,8 +413,8 @@ margin-left: 10px;
        <widget class="QLabel" name="label_provincia">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>130</y>
+          <x>221</x>
+          <y>340</y>
           <width>84</width>
           <height>27</height>
          </rect>
@@ -440,8 +440,8 @@ margin-left:10px
        <widget class="QDateEdit" name="nacimiento_date">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>40</y>
+          <x>220</x>
+          <y>250</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -474,8 +474,8 @@ margin-left: 10px;
        <widget class="QLineEdit" name="localidad_input">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>100</y>
+          <x>221</x>
+          <y>310</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -510,11 +510,11 @@ margin-left: 10px;
          <string/>
         </property>
        </widget>
-       <widget class="QLineEdit" name="mail_input">
+       <widget class="QLineEdit" name="puesto_input">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>220</y>
+          <x>221</x>
+          <y>430</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -558,8 +558,8 @@ margin-left: 10px;
        <widget class="QLineEdit" name="dni_input">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>220</y>
+          <x>10</x>
+          <y>430</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -595,13 +595,13 @@ margin-left: 10px;
          <string/>
         </property>
        </widget>
-       <widget class="QPushButton" name="crear_btn">
+       <widget class="QPushButton" name="guardarCambios_btn">
         <property name="geometry">
          <rect>
-          <x>690</x>
-          <y>360</y>
+          <x>670</x>
+          <y>550</y>
           <width>121</width>
-          <height>26</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="font">
@@ -626,14 +626,14 @@ background-color: rgba(71, 71, 103,180);
 }</string>
         </property>
         <property name="text">
-         <string>Crear </string>
+         <string>Guardar Cambios</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="direccion_input">
         <property name="geometry">
          <rect>
-          <x>21</x>
-          <y>160</y>
+          <x>11</x>
+          <y>370</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -674,8 +674,8 @@ margin-left: 10px;
        <widget class="QLabel" name="label_telefono">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>10</y>
+          <x>420</x>
+          <y>220</y>
           <width>90</width>
           <height>27</height>
          </rect>
@@ -707,8 +707,8 @@ margin-left:10px
        <widget class="QLineEdit" name="telefono_input">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>40</y>
+          <x>420</x>
+          <y>250</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -749,8 +749,8 @@ margin-left: 10px;
        <widget class="QLabel" name="label_educacion">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>250</y>
+          <x>221</x>
+          <y>460</y>
           <width>90</width>
           <height>27</height>
          </rect>
@@ -782,8 +782,8 @@ margin-left:10px
        <widget class="QLabel" name="label_disponibilidadHoraria">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>70</y>
+          <x>420</x>
+          <y>280</y>
           <width>151</width>
           <height>27</height>
          </rect>
@@ -809,8 +809,8 @@ margin-left:10px
        <widget class="QComboBox" name="comboBox">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>100</y>
+          <x>420</x>
+          <y>310</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -843,8 +843,8 @@ margin-left: 10px;
        <widget class="QComboBox" name="comboBox_relocalizarse">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>160</y>
+          <x>420</x>
+          <y>370</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -878,8 +878,8 @@ margin-left: 10px;
        <widget class="QLabel" name="label_relocalizarse">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>130</y>
+          <x>420</x>
+          <y>340</y>
           <width>171</width>
           <height>27</height>
          </rect>
@@ -902,11 +902,11 @@ margin-left:10px
          <string>¿Puede relocalizarse?</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_url">
+       <widget class="QLabel" name="label_mail">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>190</y>
+          <x>420</x>
+          <y>400</y>
           <width>158</width>
           <height>27</height>
          </rect>
@@ -935,11 +935,11 @@ margin-left:10px
          <string>Mail</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="url_input">
+       <widget class="QLineEdit" name="mail_input">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>220</y>
+          <x>420</x>
+          <y>430</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -983,8 +983,8 @@ margin-left: 10px;
        <widget class="QLabel" name="labe_titulo">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>250</y>
+          <x>10</x>
+          <y>460</y>
           <width>171</width>
           <height>27</height>
          </rect>
@@ -1010,8 +1010,8 @@ margin-left:10px
        <widget class="QLabel" name="label_experiencia">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>250</y>
+          <x>420</x>
+          <y>460</y>
           <width>158</width>
           <height>27</height>
          </rect>
@@ -1040,79 +1040,11 @@ margin-left:10px
          <string>Experiencia</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="cargarCV_btn">
-        <property name="geometry">
-         <rect>
-          <x>650</x>
-          <y>310</y>
-          <width>70</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-          <pointsize>-1</pointsize>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton{
-background-color: #F4D19B;
-border-radius:5px;
-font-family:Roboto;
-font-size: 13px
-
-}
-QPushButton:hover{
-background-color: rgba(71, 71, 103,180);
-}</string>
-        </property>
-        <property name="text">
-         <string>Cargar CV</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="subirFoto_btn">
-        <property name="geometry">
-         <rect>
-          <x>740</x>
-          <y>310</y>
-          <width>70</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-          <pointsize>-1</pointsize>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton{
-background-color: #F4D19B;
-border-radius:5px;
-font-family:Roboto;
-font-size: 13px
-
-}
-QPushButton:hover{
-background-color: rgba(71, 71, 103,180);
-}</string>
-        </property>
-        <property name="text">
-         <string>Subir Foto</string>
-        </property>
-       </widget>
        <widget class="QTextEdit" name="experiencia_input">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>280</y>
+          <x>420</x>
+          <y>490</y>
           <width>170</width>
           <height>100</height>
          </rect>
@@ -1141,8 +1073,8 @@ margin-left: 10px;
        <widget class="QLabel" name="label_habilidades">
         <property name="geometry">
          <rect>
-          <x>650</x>
-          <y>10</y>
+          <x>630</x>
+          <y>220</y>
           <width>90</width>
           <height>27</height>
          </rect>
@@ -1174,8 +1106,8 @@ margin-left:10px
        <widget class="QLabel" name="label_apto">
         <property name="geometry">
          <rect>
-          <x>650</x>
-          <y>230</y>
+          <x>630</x>
+          <y>410</y>
           <width>158</width>
           <height>27</height>
          </rect>
@@ -1207,8 +1139,8 @@ margin-left:10px
        <widget class="QRadioButton" name="radioButton_si">
         <property name="geometry">
          <rect>
-          <x>660</x>
-          <y>270</y>
+          <x>640</x>
+          <y>440</y>
           <width>41</width>
           <height>20</height>
          </rect>
@@ -1220,8 +1152,8 @@ margin-left:10px
        <widget class="QRadioButton" name="radioButton_no">
         <property name="geometry">
          <rect>
-          <x>710</x>
-          <y>270</y>
+          <x>690</x>
+          <y>440</y>
           <width>41</width>
           <height>21</height>
          </rect>
@@ -1230,11 +1162,11 @@ margin-left:10px
          <string>No</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_profesion">
+       <widget class="QLabel" name="label_url">
         <property name="geometry">
          <rect>
-          <x>650</x>
-          <y>170</y>
+          <x>630</x>
+          <y>350</y>
           <width>158</width>
           <height>27</height>
          </rect>
@@ -1263,11 +1195,11 @@ margin-left:10px
          <string>URL</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="profesion_input">
+       <widget class="QLineEdit" name="url_input">
         <property name="geometry">
          <rect>
-          <x>650</x>
-          <y>200</y>
+          <x>630</x>
+          <y>380</y>
           <width>170</width>
           <height>25</height>
          </rect>
@@ -1308,11 +1240,98 @@ margin-left: 10px;
          <string/>
         </property>
        </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>10</y>
+          <width>231</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>:/cct/Alimento.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ActualizarCV_btn">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>490</y>
+          <width>100</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: #F4D19B;
+border-radius:5px;
+font-family:Roboto;
+font-size: 13px
+
+}
+QPushButton:hover{
+background-color: rgba(71, 71, 103,180);
+}</string>
+        </property>
+        <property name="text">
+         <string>Actualizar CV</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="actualizarFoto_btn">
+        <property name="geometry">
+         <rect>
+          <x>740</x>
+          <y>490</y>
+          <width>100</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: #F4D19B;
+border-radius:5px;
+font-family:Roboto;
+font-size: 13px
+
+}
+QPushButton:hover{
+background-color: rgba(71, 71, 103,180);
+}</string>
+        </property>
+        <property name="text">
+         <string>Actualizar Foto</string>
+        </property>
+       </widget>
        <widget class="QTextEdit" name="habilidades_input">
         <property name="geometry">
          <rect>
-          <x>650</x>
-          <y>40</y>
+          <x>630</x>
+          <y>250</y>
           <width>170</width>
           <height>100</height>
          </rect>
@@ -1341,8 +1360,8 @@ margin-left: 10px;
        <widget class="QTextEdit" name="educacion_input">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>280</y>
+          <x>220</x>
+          <y>490</y>
           <width>170</width>
           <height>100</height>
          </rect>
@@ -1371,8 +1390,8 @@ margin-left: 10px;
        <widget class="QTextEdit" name="titulo_input">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>280</y>
+          <x>10</x>
+          <y>490</y>
           <width>170</width>
           <height>100</height>
          </rect>
