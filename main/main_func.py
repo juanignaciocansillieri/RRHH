@@ -8,10 +8,9 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from create_user_func import Ui_MainWindow as newUser
+from create_user_func import UsuarioWindow as newUser
 from modificar_persona import Ui_MainWindow as bmu
-sys.path.append("C:\\RRHH\\login\\")
-from login import Ui_MainWindow
+from main import Ui_MainWindow
 sys.path.append("C:\\RRHH\\clases\\")
 import usuarios as us
 
@@ -28,6 +27,7 @@ class Modern(QMainWindow):
         super(Modern, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.show()
         ############# RECIBIMOS PROPORCIONES DE LA PANTALLA ###########
         qtRectangle = self.frameGeometry()
         centerPoint = QDesktopWidget().availableGeometry().center()
@@ -40,9 +40,9 @@ class Modern(QMainWindow):
 
         self.ui.crear_btn.clicked.connect(self.mostrarNewUser)
 
-        self.ui.tableWidget_usuarios.doubleClicked.connect(self.seleccionarusuario)
+        self.ui.table.doubleClicked.connect(self.seleccionarusuario)
 
-        self.ui.tableWidget_usuarios.doubleClicked.connect(self.mostrarBmUser)
+        self.ui.table.doubleClicked.connect(self.mostrarBmUser)
 
     def seleccionarusuario(self):
         global DNI

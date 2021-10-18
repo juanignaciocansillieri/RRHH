@@ -10,7 +10,7 @@ from PyQt5.QtGui import *
 import create_user
 from create_user import Ui_MainWindow
 from PIL import Image
-sys.path.append("C:\\proyecto-final\\CLASES\\")
+sys.path.append("C:\\RRHH\\clases\\")
 import usuarios as us
 
 defaultImg = "Error.png"
@@ -58,6 +58,7 @@ class UsuarioWindow(QMainWindow):
       experiencia = self.ui.experiencia_input.toPlainText()
       titulos = self.ui.titulo_input.text()
       habilidades = self.ui.habilidades_input.text()
+      puesto = self.ui.puesto_input.text()
       
 
       if self.ui.radioButton_si.isCheckable():
@@ -67,7 +68,7 @@ class UsuarioWindow(QMainWindow):
       
       
 
-      if nom=="" or apellido=="" or educacion or titulos or experiencia or habilidades  or telefono == "" or url =="" or provincia == "" or dni=="" or direccion =="" or localidad == ""  or dni=="" or localidad=="" or nacimiento=="":
+      if nom=="" or apellido=="" or educacion=="" or titulos=="" or experiencia=="" or habilidades==""  or telefono == "" or url =="" or provincia == "" or dni=="" or direccion =="" or localidad == ""  or dni=="" or localidad=="" or nacimiento=="" or puesto=="":
         QtWidgets.QMessageBox.critical(self, "Error", "Ingrese todos los datos")
         return None
 
@@ -84,8 +85,10 @@ class UsuarioWindow(QMainWindow):
       else:
         tipo="0"
 
+      domicilio=str(direccion+","+localidad+","+provincia)
+
       
-      us.usuarios(nom,apellido,dni,mail,direccion,defaultImg,nacimiento,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,"cv",apto)
+      us.usuarios(nom,apellido,dni,mail,domicilio,defaultImg,nacimiento,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,"cv",apto)
       self.close()
       
 
