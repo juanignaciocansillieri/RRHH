@@ -510,7 +510,7 @@ margin-left: 10px;
          <string/>
         </property>
        </widget>
-       <widget class="QLineEdit" name="mail_input">
+       <widget class="QLineEdit" name="puesto_input">
         <property name="geometry">
          <rect>
           <x>230</x>
@@ -935,7 +935,7 @@ margin-left:10px
          <string>Mail</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="url_input">
+       <widget class="QLineEdit" name="mail_input">
         <property name="geometry">
          <rect>
           <x>440</x>
@@ -1263,7 +1263,7 @@ margin-left:10px
          <string>URL</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="profesion_input">
+       <widget class="QLineEdit" name="url_input">
         <property name="geometry">
          <rect>
           <x>650</x>
