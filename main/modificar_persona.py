@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(849, 619)
+        MainWindow.resize(849, 630)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -346,44 +346,6 @@ class Ui_MainWindow(object):
         self.telefono_input.setText("")
         self.telefono_input.setPlaceholderText("")
         self.telefono_input.setObjectName("telefono_input")
-        self.titulo_input = QtWidgets.QLineEdit(self.frame_3)
-        self.titulo_input.setGeometry(QtCore.QRect(10, 490, 170, 100))
-        self.titulo_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.titulo_input.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.titulo_input.setStyleSheet("\n"
-"background-color: #D7E9F7;\n"
-"border: 0.5px solid #c1c1c1;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: #000;\n"
-"font-family:Roboto;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"\n"
-"")
-        self.titulo_input.setText("")
-        self.titulo_input.setPlaceholderText("")
-        self.titulo_input.setObjectName("titulo_input")
-        self.educacion_input = QtWidgets.QLineEdit(self.frame_3)
-        self.educacion_input.setGeometry(QtCore.QRect(221, 490, 170, 100))
-        self.educacion_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.educacion_input.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.educacion_input.setStyleSheet("\n"
-"background-color: #D7E9F7;\n"
-"border: 0.5px solid #c1c1c1;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: #000;\n"
-"font-family:Roboto;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"\n"
-"")
-        self.educacion_input.setText("")
-        self.educacion_input.setPlaceholderText("")
-        self.educacion_input.setObjectName("educacion_input")
         self.label_educacion = QtWidgets.QLabel(self.frame_3)
         self.label_educacion.setGeometry(QtCore.QRect(221, 460, 90, 27))
         self.label_educacion.setMaximumSize(QtCore.QSize(90, 16777215))
@@ -550,25 +512,6 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_habilidades.setObjectName("label_habilidades")
-        self.habilidades_input = QtWidgets.QLineEdit(self.frame_3)
-        self.habilidades_input.setGeometry(QtCore.QRect(630, 250, 170, 100))
-        self.habilidades_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.habilidades_input.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.habilidades_input.setStyleSheet("\n"
-"background-color: #D7E9F7;\n"
-"border: 0.5px solid #c1c1c1;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: #000;\n"
-"font-family:Roboto;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"\n"
-"")
-        self.habilidades_input.setText("")
-        self.habilidades_input.setPlaceholderText("")
-        self.habilidades_input.setObjectName("habilidades_input")
         self.label_apto = QtWidgets.QLabel(self.frame_3)
         self.label_apto.setGeometry(QtCore.QRect(630, 410, 158, 27))
         self.label_apto.setMaximumSize(QtCore.QSize(500, 16777215))
@@ -665,6 +608,54 @@ class Ui_MainWindow(object):
 "background-color: rgba(71, 71, 103,180);\n"
 "}")
         self.actualizarFoto_btn.setObjectName("actualizarFoto_btn")
+        self.habilidades_input = QtWidgets.QTextEdit(self.frame_3)
+        self.habilidades_input.setGeometry(QtCore.QRect(630, 250, 170, 100))
+        self.habilidades_input.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.habilidades_input.setStyleSheet("\n"
+"background-color: #D7E9F7;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: #000;\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"")
+        self.habilidades_input.setObjectName("habilidades_input")
+        self.educacion_input = QtWidgets.QTextEdit(self.frame_3)
+        self.educacion_input.setGeometry(QtCore.QRect(220, 490, 170, 100))
+        self.educacion_input.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.educacion_input.setStyleSheet("\n"
+"background-color: #D7E9F7;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: #000;\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"")
+        self.educacion_input.setObjectName("educacion_input")
+        self.titulo_input = QtWidgets.QTextEdit(self.frame_3)
+        self.titulo_input.setGeometry(QtCore.QRect(10, 490, 170, 100))
+        self.titulo_input.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.titulo_input.setStyleSheet("\n"
+"background-color: #D7E9F7;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: #000;\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"")
+        self.titulo_input.setObjectName("titulo_input")
         self.verticalLayout.addWidget(self.frame_2)
         MainWindow.setCentralWidget(self.centralwidget)
 

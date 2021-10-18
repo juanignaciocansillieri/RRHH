@@ -210,7 +210,7 @@ def listar_user():
         cursor = a.cursor()
         cursor.execute("USE RRHH;")
         try:
-            query = "SELECT dni,apellido,apellido,mail,puesto,apto FROM usuarios"
+            query = "SELECT dni,apellido,nombre,mail,puesto,apto FROM usuarios"
             cursor.execute(query)
             user = cursor.fetchall()
             a.commit()

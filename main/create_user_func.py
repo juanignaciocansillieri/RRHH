@@ -88,7 +88,7 @@ class UsuarioWindow(QMainWindow):
       domicilio=str(direccion+","+localidad+","+provincia)
 
       
-      us.usuarios(nom,apellido,dni,mail,domicilio,defaultImg,nacimiento,puesto,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,curriculum,apto)
+      us.usuarios(nom,apellido,dni,mail,domicilio,defaultImg,nacimiento,puesto,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,curriculum,apto,telefono)
       self.close()
       
 

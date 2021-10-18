@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>849</width>
-    <height>619</height>
+    <height>630</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -746,90 +746,6 @@ margin-left: 10px;
          <string/>
         </property>
        </widget>
-       <widget class="QLineEdit" name="titulo_input">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>490</y>
-          <width>170</width>
-          <height>100</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">
-background-color: #D7E9F7;
-border: 0.5px solid #c1c1c1;
-border-radius: 3px;
-padding: 4 5px;
-color: #000;
-font-family:Roboto;
-font-size:13px;
-font-weight: 400;
-margin-left: 10px;
-
-</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="educacion_input">
-        <property name="geometry">
-         <rect>
-          <x>221</x>
-          <y>490</y>
-          <width>170</width>
-          <height>100</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">
-background-color: #D7E9F7;
-border: 0.5px solid #c1c1c1;
-border-radius: 3px;
-padding: 4 5px;
-color: #000;
-font-family:Roboto;
-font-size:13px;
-font-weight: 400;
-margin-left: 10px;
-
-</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_educacion">
         <property name="geometry">
          <rect>
@@ -1187,48 +1103,6 @@ margin-left:10px
          <string>Habilidades</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="habilidades_input">
-        <property name="geometry">
-         <rect>
-          <x>630</x>
-          <y>250</y>
-          <width>170</width>
-          <height>100</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">
-background-color: #D7E9F7;
-border: 0.5px solid #c1c1c1;
-border-radius: 3px;
-padding: 4 5px;
-color: #000;
-font-family:Roboto;
-font-size:13px;
-font-weight: 400;
-margin-left: 10px;
-
-</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_apto">
         <property name="geometry">
          <rect>
@@ -1451,6 +1325,96 @@ background-color: rgba(71, 71, 103,180);
         </property>
         <property name="text">
          <string>Actualizar Foto</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="habilidades_input">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>250</y>
+          <width>170</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #D7E9F7;
+border: 0.5px solid #c1c1c1;
+border-radius: 3px;
+padding: 4 5px;
+color: #000;
+font-family:Roboto;
+font-size:13px;
+font-weight: 400;
+margin-left: 10px;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="educacion_input">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>490</y>
+          <width>170</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #D7E9F7;
+border: 0.5px solid #c1c1c1;
+border-radius: 3px;
+padding: 4 5px;
+color: #000;
+font-family:Roboto;
+font-size:13px;
+font-weight: 400;
+margin-left: 10px;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="titulo_input">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>490</y>
+          <width>170</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #D7E9F7;
+border: 0.5px solid #c1c1c1;
+border-radius: 3px;
+padding: 4 5px;
+color: #000;
+font-family:Roboto;
+font-size:13px;
+font-weight: 400;
+margin-left: 10px;
+
+</string>
         </property>
        </widget>
       </widget>
