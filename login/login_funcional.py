@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 #############################################
 
-from login import Ui_MainWindow
+from login import Ui_MainWindow 
 
 sys.path.append("C:\\RRHH\\main\\")
 from main import Modern 
