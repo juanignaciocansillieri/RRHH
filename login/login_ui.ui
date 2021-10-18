@@ -69,7 +69,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: #12151a;
+          <string notr="true">background-color: #F4D19B;
 border-radius: 45px
 </string>
          </property>
@@ -90,7 +90,6 @@ border-radius: 45px
           </property>
           <property name="styleSheet">
            <string notr="true">font: 35px bold ,Roboto;
-color: #fff;
 font-weight: bold;</string>
           </property>
           <property name="text">
@@ -108,7 +107,6 @@ font-weight: bold;</string>
           </property>
           <property name="styleSheet">
            <string notr="true">font: 20px;
-color: #fff;
 font-family: Roboto;
 font-weight: 200;
 </string>
@@ -133,10 +131,9 @@ font-weight: 200;
           </property>
           <property name="styleSheet">
            <string notr="true">QLineEdit{
-background: #23262b;
+background: #F9F3DF;
 border-radius: 5px;
 padding: 5px;
-color: #b3b3b3;
 }
 
 QLineEdit:focus{
@@ -147,7 +144,7 @@ border: 1px solid rgb(75, 75, 75);
            <string/>
           </property>
           <property name="placeholderText">
-           <string>Código Empleado</string>
+           <string>Usuario</string>
           </property>
          </widget>
          <widget class="QLineEdit" name="pass_login_input">
@@ -166,10 +163,10 @@ border: 1px solid rgb(75, 75, 75);
           </property>
           <property name="styleSheet">
            <string notr="true">QLineEdit{
-background: #23262b;
+background: #F9F3DF;
 border-radius: 5px;
 padding: 5px;
-color: #b3b3b3;
+
 }
 
 QLineEdit:focus{
@@ -203,8 +200,7 @@ border: 1px solid rgb(75, 75, 75);
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton#login_btn{
-background-color: #1173ff;
-color:#fff;
+background-color: #D7E9F7;
 font-size:12px;
 font-family: Roboto;
 font-weight: bold;

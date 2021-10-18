@@ -14,6 +14,7 @@ sys.path.append("C:\\proyecto-final\\CLASES\\")
 import usuarios as us
 
 defaultImg = "Error.png"
+curriculum = ""
 
 class UsuarioWindow(QMainWindow):
 
@@ -31,12 +32,11 @@ class UsuarioWindow(QMainWindow):
         qtRectangle.moveCenter(centerPoint)
         self.move(qtRectangle.topLeft())
 
-        #self.ui.pushButton_crear_usuario.clicked.connect(self.crearUser)
         self.ui.subirFoto_btn.clicked.connect(self.uploadImg)
+        self.ui.cargarCV_btn.clicked.connect(self.uploadCv)
 
         self.ui.crear_btn.clicked.connect(self.crearUser)
 
-        #self.ui.pushButton_usuarios_2.clicked.connect(self.crearUser)
     
     #CREAR PRODUCTO NUEVO
     def crearUser(self):   
@@ -84,14 +84,9 @@ class UsuarioWindow(QMainWindow):
       else:
         tipo="0"
 
-      if us.ver_dni(dni) == 1:
-        QtWidgets.QMessageBox.critical(self, "Error", "DNI Existente")
-        return None
-      else:
-        user = us.usuarios(nom,apellido,dni,tipo,puesto,nacimiento,mail)
-        user.alta_login(contraseña)
-        self.close()
-      #return(codigo,nombre,desc,cantidad,marca,venc,condicion,lote,fragil)
+      
+      us.usuarios(nom,apellido,dni,mail,direccion,defaultImg,nacimiento,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,"cv",apto)
+      self.close()
       
 
 
@@ -104,3 +99,20 @@ class UsuarioWindow(QMainWindow):
             img=Image.open(self.filename)
             img=img.resize(size)
             img.save("C:\RRHH\img/{0}".format(defaultImg))
+
+    def uploadCv(self):
+        global curriculum 
+        size=(256,256)
+
+        self.filename,ok = QFileDialog.getOpenFileName(self,"Upload Image","","Image Files (*.pdf)")
+        if ok:
+            curriculum = os.path.basename(self.filename)
+            img=Image.open(self.filename)
+            img=img.resize(size)
+            img.save("C:\RRHH\cv/{0}".format(curriculum))
+   
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = UsuarioWindow()
+    window.show()
+    sys.exit(app.exec())

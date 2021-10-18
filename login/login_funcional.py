@@ -12,9 +12,10 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 #############################################
 
+from login import Ui_MainWindow
+
 sys.path.append("C:\\RRHH\\main\\")
 from main import Modern 
-from login import Ui_MainWindow
 
 admin_user=True
 
@@ -23,7 +24,6 @@ class LoginWindow(QMainWindow):
         super(LoginWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.setWindowFlag(Qt.FramelessWindowHint)
 
         ############# RECIBIMOS PROPORCIONES DE LA PANTALLA ###########
         qtRectangle = self.frameGeometry()

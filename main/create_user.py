@@ -660,7 +660,6 @@ class Ui_MainWindow(object):
         self.label_apto.setText(_translate("MainWindow", "Apto"))
         self.radioButton_si.setText(_translate("MainWindow", "Sí"))
         self.radioButton_no.setText(_translate("MainWindow", "No"))
-import img_oficiales_rc
 
 
 if __name__ == "__main__":
