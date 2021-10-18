@@ -116,7 +116,7 @@ background-color: #D7E9F7
      <widget class="QPushButton" name="crear_btn">
       <property name="geometry">
        <rect>
-        <x>680</x>
+        <x>660</x>
         <y>10</y>
         <width>100</width>
         <height>26</height>
@@ -145,6 +145,41 @@ background-color: rgba(71, 71, 103,180);
       </property>
       <property name="text">
        <string>Crear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_actualizarMov">
+      <property name="geometry">
+       <rect>
+        <x>755</x>
+        <y>13</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: none</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="img.qrc">
+        <normaloff>:/newPrefix/refresh.png</normaloff>:/newPrefix/refresh.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>17</height>
+       </size>
       </property>
      </widget>
     </widget>

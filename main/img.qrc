@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>refresh.png</file>
     <file>Buscar_PNG.png</file>
   </qresource>
 </RCC>
