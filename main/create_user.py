@@ -237,11 +237,11 @@ class Ui_MainWindow(object):
 "")
         self.localidad_input.setPlaceholderText("")
         self.localidad_input.setObjectName("localidad_input")
-        self.mail_input = QtWidgets.QLineEdit(self.frame_3)
-        self.mail_input.setGeometry(QtCore.QRect(230, 220, 170, 25))
-        self.mail_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.mail_input.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.mail_input.setStyleSheet("\n"
+        self.puesto_input = QtWidgets.QLineEdit(self.frame_3)
+        self.puesto_input.setGeometry(QtCore.QRect(230, 220, 170, 25))
+        self.puesto_input.setMinimumSize(QtCore.QSize(0, 0))
+        self.puesto_input.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.puesto_input.setStyleSheet("\n"
 "background-color: #D7E9F7;\n"
 "border: 0.5px solid #c1c1c1;\n"
 "border-radius: 3px;\n"
@@ -253,10 +253,10 @@ class Ui_MainWindow(object):
 "margin-left: 10px;\n"
 "\n"
 "")
-        self.mail_input.setText("")
-        self.mail_input.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mail_input.setPlaceholderText("")
-        self.mail_input.setObjectName("mail_input")
+        self.puesto_input.setText("")
+        self.puesto_input.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.puesto_input.setPlaceholderText("")
+        self.puesto_input.setObjectName("puesto_input")
         self.dni_input = QtWidgets.QLineEdit(self.frame_3)
         self.dni_input.setGeometry(QtCore.QRect(20, 220, 170, 25))
         self.dni_input.setMinimumSize(QtCore.QSize(0, 0))
@@ -435,11 +435,11 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_url.setObjectName("label_url")
-        self.url_input = QtWidgets.QLineEdit(self.frame_3)
-        self.url_input.setGeometry(QtCore.QRect(440, 220, 170, 25))
-        self.url_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.url_input.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.url_input.setStyleSheet("\n"
+        self.mail_input = QtWidgets.QLineEdit(self.frame_3)
+        self.mail_input.setGeometry(QtCore.QRect(440, 220, 170, 25))
+        self.mail_input.setMinimumSize(QtCore.QSize(0, 0))
+        self.mail_input.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.mail_input.setStyleSheet("\n"
 "background-color: #D7E9F7;\n"
 "border: 0.5px solid #c1c1c1;\n"
 "border-radius: 3px;\n"
@@ -451,10 +451,10 @@ class Ui_MainWindow(object):
 "margin-left: 10px;\n"
 "\n"
 "")
-        self.url_input.setText("")
-        self.url_input.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.url_input.setPlaceholderText("")
-        self.url_input.setObjectName("url_input")
+        self.mail_input.setText("")
+        self.mail_input.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mail_input.setPlaceholderText("")
+        self.mail_input.setObjectName("mail_input")
         self.labe_titulo = QtWidgets.QLabel(self.frame_3)
         self.labe_titulo.setGeometry(QtCore.QRect(20, 250, 171, 27))
         font = QtGui.QFont()
@@ -582,11 +582,11 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_profesion.setObjectName("label_profesion")
-        self.profesion_input = QtWidgets.QLineEdit(self.frame_3)
-        self.profesion_input.setGeometry(QtCore.QRect(650, 200, 170, 25))
-        self.profesion_input.setMinimumSize(QtCore.QSize(0, 0))
-        self.profesion_input.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.profesion_input.setStyleSheet("\n"
+        self.url_input = QtWidgets.QLineEdit(self.frame_3)
+        self.url_input.setGeometry(QtCore.QRect(650, 200, 170, 25))
+        self.url_input.setMinimumSize(QtCore.QSize(0, 0))
+        self.url_input.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.url_input.setStyleSheet("\n"
 "background-color: #D7E9F7;\n"
 "border: 0.5px solid #c1c1c1;\n"
 "border-radius: 3px;\n"
@@ -598,10 +598,10 @@ class Ui_MainWindow(object):
 "margin-left: 10px;\n"
 "\n"
 "")
-        self.profesion_input.setText("")
-        self.profesion_input.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.profesion_input.setPlaceholderText("")
-        self.profesion_input.setObjectName("profesion_input")
+        self.url_input.setText("")
+        self.url_input.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.url_input.setPlaceholderText("")
+        self.url_input.setObjectName("url_input")
         self.habilidades_input = QtWidgets.QTextEdit(self.frame_3)
         self.habilidades_input.setGeometry(QtCore.QRect(650, 40, 170, 100))
         self.habilidades_input.setMaximumSize(QtCore.QSize(16777215, 100))
