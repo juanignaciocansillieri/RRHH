@@ -111,8 +111,3 @@ class UsuarioWindow(QMainWindow):
             img=img.resize(size)
             img.save("C:\RRHH\cv/{0}".format(curriculum))
    
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = UsuarioWindow()
-    window.show()
-    sys.exit(app.exec())
