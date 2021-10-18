@@ -9,7 +9,7 @@ import conexion as c
 
 class usuarios:
     
-    def __init__(self,nombre,apellido,dni,mail,telefono,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto):
+    def __init__(self,nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto,telefono):
         self.nombre=nombre
         self.apellido=apellido
         self.dni=dni
@@ -38,7 +38,7 @@ class usuarios:
         cursor=a.cursor()
         try:
             cursor.execute("USE RRHH;")
-            query = "INSERT INTO usuarios(nombre,apellido,dni,mail,telefono,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+            query = "INSERT INTO usuarios(nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto,telefono) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             values = (self.nombre,self.apellido,self.dni,self.mail,self.telefono,self.domicilio,self.foto,self.nacimiento,self.puesto,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto)
             cursor.execute(query,values)
             a.commit()
@@ -84,7 +84,7 @@ class usuarios:
         a = c.start_connection()
         cursor = a.cursor()
         cursor.execute("USE RRHH;")
-        query = ("SELECT nombre,apellido,dni,mail,telefono,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto FROM usuarios WHERE dni=%s")
+        query = ("SELECT nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto,telefono FROM usuarios WHERE dni=%s")
         cursor.execute(query,dni)
         data = cursor.fetchall()
         a.commit()
@@ -105,7 +105,7 @@ class usuarios:
         c.close_connection(a)
 
 
-    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,telefono,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv):
+    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,telefono):
         a=c.start_connection()
         cursor=a.cursor()
         query = "SELECT idusuarios FROM usuarios WHERE dni=%s"
