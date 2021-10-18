@@ -88,7 +88,7 @@ class UsuarioWindow(QMainWindow):
       domicilio=str(direccion+","+localidad+","+provincia)
 
       
-      us.usuarios(nom,apellido,dni,mail,domicilio,defaultImg,nacimiento,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,curriculum,apto)
+      us.usuarios(nom,apellido,dni,mail,domicilio,defaultImg,nacimiento,puesto,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,curriculum,apto)
       self.close()
       
 
@@ -107,7 +107,7 @@ class UsuarioWindow(QMainWindow):
         global curriculum 
         size=(256,256)
 
-        self.filename,ok = QFileDialog.getOpenFileName(self,"Upload Image","","Image Files (*.pdf)")
+        self.filename,ok = QFileDialog.getOpenFileName(self,"Upload Image","","Image Files (*.jpg *.png)")
         if ok:
             curriculum = os.path.basename(self.filename)
             img=Image.open(self.filename)

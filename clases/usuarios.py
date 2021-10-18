@@ -36,6 +36,7 @@ class usuarios:
         a=c.start_connection()
         cursor=a.cursor()
         try:
+            cursor.execute("USE RRHH;")
             query = "INSERT INTO usuarios(nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             values = (self.nombre,self.apellido,self.dni,self.mail,self.domicilio,self.foto,self.nacimiento,self.puesto,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto)
             cursor.execute(query,values)
@@ -48,6 +49,7 @@ class usuarios:
     def contar_filas_busqueda(param):
         a = c.start_connection()
         cursor = a.cursor()
+        cursor.execute("USE RRHH;")
         query = "SELECT COUNT(*) FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s or puesto=%s"
         cursor.execute(query, (param, param,param,param))
         a.commit()
@@ -61,6 +63,7 @@ class usuarios:
     def buscar_user(param):
         a = c.start_connection()
         cursor = a.cursor()
+        cursor.execute("USE RRHH;")
         query = ("SELECT dni,apellido,nombre,mail,puesto,apto FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s or puesto=%s")
         cursor.execute(query, (param, param,param,param))
         data = cursor.fetchall()
@@ -70,6 +73,7 @@ class usuarios:
     def buscar_user_rows(param):
         a = c.start_connection()
         cursor = a.cursor()
+        cursor.execute("USE RRHH;")
         query = ("SELECT dni,apellido,nombre,mail,puesto,apto FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s or puesto=%s")
         data = cursor.execute(query, (param, param,param,param))
         a.commit()
@@ -78,6 +82,7 @@ class usuarios:
     def mostrar_user(dni):
         a = c.start_connection()
         cursor = a.cursor()
+        cursor.execute("USE RRHH;")
         query = ("SELECT nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto FROM usuarios WHERE dni=%s")
         cursor.execute(query,dni)
         data = cursor.fetchall()
@@ -190,6 +195,7 @@ class usuarios:
 def contar_filas():
     a = c.start_connection()
     cursor = a.cursor()
+    cursor.execute("USE RRHH;")
     query = "SELECT COUNT(*) FROM usuarios"
     cursor.execute(query)
     a.commit()
@@ -202,6 +208,7 @@ def contar_filas():
 def listar_user():
         a = c.start_connection()
         cursor = a.cursor()
+        cursor.execute("USE RRHH;")
         try:
             query = "SELECT dni,apellido,apellido,mail,puesto,apto FROM usuarios"
             cursor.execute(query)

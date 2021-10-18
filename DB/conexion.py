@@ -70,7 +70,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     titulo_prof VARCHAR(50) NOT NULL,
     educacion VARCHAR(50) NOT NULL,
     exp VARCHAR(50) NOT NULL,
-    cv VARCHAR(20) NOT NULL,
+    cv VARCHAR(20) NULL,
     apto BINARY(1) NOT NULL
     );"""
 
