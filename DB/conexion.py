@@ -58,7 +58,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     nombre VARCHAR(20) NOT NULL,
     apellido VARCHAR(20) NOT NULL,
     dni VARCHAR(20) NOT NULL,
-    mail VARCHAR(50) NOT NULL
+    mail VARCHAR(50) NOT NULL,
     domicilio VARCHAR(50) NOT NULL,
     foto VARCHAR(20) NOT NULL,
     nacimiento DATE NOT NULL,

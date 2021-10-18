@@ -3,7 +3,8 @@ from sys import setprofile
 from typing import NoReturn
 import pymysql
 import os
-from DB import conexion as c
+sys.path.append("C:\\RRHH\\DB\\")
+import conexion as c
 
 
 class usuarios:
