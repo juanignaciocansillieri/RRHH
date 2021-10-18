@@ -54,10 +54,10 @@ class UsuarioWindow(QMainWindow):
       nacimiento = self.ui.nacimiento_date.date().toString("yyyy/MM/dd")
       disponibilidad = self.ui.comboBox.currentText()
       url = self.ui.url_input.text()
-      educacion = self.ui.educacion_input.text()
+      educacion = self.ui.educacion_input.toPlainText()
       experiencia = self.ui.experiencia_input.toPlainText()
-      titulos = self.ui.titulo_input.text()
-      habilidades = self.ui.habilidades_input.text()
+      titulos = self.ui.titulo_input.toPlainText()
+      habilidades = self.ui.habilidades_input.toPlainText()
       puesto = self.ui.puesto_input.text()
       
 
@@ -77,18 +77,18 @@ class UsuarioWindow(QMainWindow):
         return None
       
       if disponibilidad=="Full Time":
-        tipo="1"
+        disponibilidad="1"
       else:
-        tipo="0"
+        disponibilidad="0"
       if relocalizarse=="Si":
-        tipo="1"
+        relocalizarse="1"
       else:
-        tipo="0"
+        relocalizarse="0"
 
       domicilio=str(direccion+","+localidad+","+provincia)
 
       
-      us.usuarios(nom,apellido,dni,mail,domicilio,defaultImg,nacimiento,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,"cv",apto)
+      us.usuarios(nom,apellido,dni,mail,domicilio,defaultImg,nacimiento,disponibilidad,relocalizarse,habilidades,url,titulos,educacion,experiencia,curriculum,apto)
       self.close()
       
 
