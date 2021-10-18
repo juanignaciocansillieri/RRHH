@@ -8,7 +8,7 @@ from DB import conexion as c
 
 class usuarios:
     
-    def __init__(self,nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto):
+    def __init__(self,nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto):
         self.nombre=nombre
         self.apellido=apellido
         self.dni=dni
@@ -16,6 +16,7 @@ class usuarios:
         self.domicilio=domicilio
         self.foto=foto
         self.nacimiento=nacimiento
+        self.puesto=puesto
         self.disp_horaria=disp_horaria
         self.disp_reloc=disp_reloc
         self.habilidades=habilidades
@@ -34,21 +35,33 @@ class usuarios:
         a=c.start_connection()
         cursor=a.cursor()
         try:
-            query = "INSERT INTO usuarios(nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-            values = (self.nombre,self.apellido,self.dni,self.mail,self.domicilio,self.foto,self.nacimiento,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto)
+            query = "INSERT INTO usuarios(nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+            values = (self.nombre,self.apellido,self.dni,self.mail,self.domicilio,self.foto,self.nacimiento,self.puesto,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto)
             cursor.execute(query,values)
             a.commit()
             print("se dio alta usuario correctamente")
         except pymysql.err.OperationalError as err:
             print("Hubo un error:", err)
         c.close_connection(a)
+
+    def contar_filas_busqueda(param):
+        a = c.start_connection()
+        cursor = a.cursor()
+        query = "SELECT COUNT(*) FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s or puesto=%s"
+        cursor.execute(query, (param, param,param,param))
+        a.commit()
+        b = cursor.fetchall()
+        b = str(b[0][0])
+        n = int(b)
+        c.close_connection(a)
+        return n
     
 
     def buscar_user(param):
         a = c.start_connection()
         cursor = a.cursor()
-        query = ("SELECT dni,nombre,apellido,tipo,nacimiento FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s")
-        cursor.execute(query, (param, param,param))
+        query = ("SELECT dni,apellido,nombre,mail,puesto,apto FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s or puesto=%s")
+        cursor.execute(query, (param, param,param,param))
         data = cursor.fetchall()
         a.commit()
         return data
@@ -56,15 +69,15 @@ class usuarios:
     def buscar_user_rows(param):
         a = c.start_connection()
         cursor = a.cursor()
-        query = ("SELECT dni,nombre,apellido,tipo,nacimiento FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s")
-        data = cursor.execute(query, (param, param,param))
+        query = ("SELECT dni,apellido,nombre,mail,puesto,apto FROM usuarios WHERE dni=%s or nombre=%s or apellido=%s or puesto=%s")
+        data = cursor.execute(query, (param, param,param,param))
         a.commit()
         return data
 
     def mostrar_user(dni):
         a = c.start_connection()
         cursor = a.cursor()
-        query = ("SELECT nombre,apellido,dni,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto FROM usuarios WHERE dni=%s")
+        query = ("SELECT nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto FROM usuarios WHERE dni=%s")
         cursor.execute(query,dni)
         data = cursor.fetchall()
         a.commit()
@@ -85,7 +98,7 @@ class usuarios:
         c.close_connection(a)
 
 
-    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,domicilio,foto,nacimiento,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv):
+    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv):
         a=c.start_connection()
         cursor=a.cursor()
         query = "SELECT idusuarios FROM usuarios WHERE dni=%s"
@@ -121,6 +134,10 @@ class usuarios:
             a.commit()
             query = "UPDATE usuarios SET nacimiento=%s WHERE idusuarios=%s"
             values = (nacimiento,idu)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE usuarios SET puesto=%s WHERE idusuarios=%s"
+            values = (puesto,idu)
             cursor.execute(query, values)
             a.commit()
             query = "UPDATE usuarios SET disp_horaria=%s WHERE idusuarios=%s"
@@ -169,10 +186,10 @@ class usuarios:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-def contar_filas_aptos():
+def contar_filas():
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT COUNT(*) FROM usuarios WHERE apto = 1"
+    query = "SELECT COUNT(*) FROM usuarios"
     cursor.execute(query)
     a.commit()
     b = cursor.fetchall()
@@ -185,7 +202,7 @@ def listar_user():
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "SELECT dni,nombre,apellido,tipo,nacimiento FROM usuarios WHERE apto = 1"
+            query = "SELECT dni,apellido,apellido,mail,puesto,apto FROM usuarios"
             cursor.execute(query)
             user = cursor.fetchall()
             a.commit()

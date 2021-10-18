@@ -62,6 +62,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     domicilio VARCHAR(50) NOT NULL,
     foto VARCHAR(20) NOT NULL,
     nacimiento DATE NOT NULL,
+    puesto VARCHAR(20) NOT NULL,
     disp_horaria BINARY(1) NOT NULL,
     disp_reloc BINARY(1) NOT NULL,
     habilidades VARCHAR(50) NOT NULL,
