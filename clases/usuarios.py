@@ -39,7 +39,7 @@ class usuarios:
         try:
             cursor.execute("USE RRHH;")
             query = "INSERT INTO usuarios(nombre,apellido,dni,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto,telefono) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-            values = (self.nombre,self.apellido,self.dni,self.mail,self.telefono,self.domicilio,self.foto,self.nacimiento,self.puesto,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto)
+            values = (self.nombre,self.apellido,self.dni,self.mail,self.domicilio,self.foto,self.nacimiento,self.puesto,self.disp_horaria,self.disp_reloc,self.habilidades,self.url,self.titulo_prof,self.educacion,self.exp,self.cv,self.apto,self.telefono)
             cursor.execute(query,values)
             a.commit()
             print("se dio alta usuario correctamente")
@@ -105,14 +105,16 @@ class usuarios:
         c.close_connection(a)
 
 
-    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,telefono):
+    def modificar_datos_user(dniv,dnin,nombre,apellido,mail,domicilio,foto,nacimiento,puesto,disp_horaria,disp_reloc,habilidades,url,titulo_prof,educacion,exp,cv,apto,telefono):
         a=c.start_connection()
         cursor=a.cursor()
+        cursor.execute("USE RRHH;")
         query = "SELECT idusuarios FROM usuarios WHERE dni=%s"
         values = dniv
         cursor.execute(query, values)
         a.commit()
         b = cursor.fetchall()
+        print(b)
         idu = str(b[0][0])
         try:
             query = "UPDATE usuarios SET nombre=%s WHERE idusuarios=%s"
@@ -191,6 +193,10 @@ class usuarios:
             values = (cv,idu)
             cursor.execute(query, values)
             a.commit()
+            query = "UPDATE usuarios SET apto=%s WHERE idusuarios=%s"
+            values = (apto,idu)
+            cursor.execute(query, values)
+            a.commit()
             
             print("se modifico  usuario correctamente")
         except pymysql.err.OperationalError as err:
@@ -215,12 +221,13 @@ def listar_user():
         cursor = a.cursor()
         cursor.execute("USE RRHH;")
         try:
-            query = "SELECT dni,apellido,a,mail,puesto,apto FROM usuarios"
+            query = "SELECT dni,apellido,nombre,mail,puesto,apto FROM usuarios"
             cursor.execute(query)
             user = cursor.fetchall()
             a.commit()
         except pymysql.err.OperationalError as err:
             print("Hubo un error:", err)
+            user = ""
         c.close_connection(a)
         return user
     

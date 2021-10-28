@@ -40,7 +40,7 @@ class UsuarioWindow(QMainWindow):
     
     #CREAR PRODUCTO NUEVO
     def crearUser(self):   
-    
+      global defaultImg
       #RECIBIR VALORES DE LA VENTANA
       apellido = self.ui.apellido_input.text()
       nom = self.ui.nombre_input.text()

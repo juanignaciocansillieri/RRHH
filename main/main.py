@@ -14,7 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(823, 659)
+        MainWindow.resize(823, 671)
+        MainWindow.setMinimumSize(QtCore.QSize(823, 671))
+        MainWindow.setMaximumSize(QtCore.QSize(823, 671))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -83,8 +85,21 @@ class Ui_MainWindow(object):
         self.label_titulo.setStyleSheet("font-family: Roboto;")
         self.label_titulo.setObjectName("label_titulo")
         self.table = QtWidgets.QTableWidget(self.frame)
+        self.table.setEnabled(True)
         self.table.setGeometry(QtCore.QRect(30, 110, 770, 532))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.table.sizePolicy().hasHeightForWidth())
+        self.table.setSizePolicy(sizePolicy)
+        self.table.setMaximumSize(QtCore.QSize(770, 16777215))
         self.table.setStyleSheet("background-color: #F4D19B")
+        self.table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.table.setTabKeyNavigation(False)
+        self.table.setProperty("showDropIndicator", False)
+        self.table.setDragDropOverwriteMode(False)
+        self.table.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectItems)
+        self.table.setWordWrap(False)
         self.table.setObjectName("table")
         self.table.setColumnCount(6)
         self.table.setRowCount(1)
@@ -113,7 +128,9 @@ class Ui_MainWindow(object):
         self.table.setHorizontalHeaderItem(5, item)
         self.table.horizontalHeader().setVisible(True)
         self.table.horizontalHeader().setDefaultSectionSize(128)
+        self.table.horizontalHeader().setHighlightSections(False)
         self.table.verticalHeader().setVisible(False)
+        self.table.verticalHeader().setHighlightSections(False)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -139,7 +156,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Puesto"))
         item = self.table.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "Apto"))
-import img
+import img_rc
 
 
 if __name__ == "__main__":
