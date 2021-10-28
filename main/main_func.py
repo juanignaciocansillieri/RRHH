@@ -275,7 +275,7 @@ class BM_Usuario(QMainWindow):
             curriculum = os.path.basename(self.filename)
             img=Image.open(self.filename)
             img=img.resize(size)
-            img.save("C:\RRHH\img/{0}".format(curriculum))
+            img.save("C:\RRHH\cv/{0}".format(curriculum))
 
 
 

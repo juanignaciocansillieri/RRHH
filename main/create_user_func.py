@@ -8,7 +8,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import create_user
-from create_user import Ui_MainWindow
+from crear_persona import Ui_MainWindow
 from PIL import Image
 sys.path.append("C:\\RRHH\\clases\\")
 import usuarios as us
