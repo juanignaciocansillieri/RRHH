@@ -156,7 +156,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Puesto"))
         item = self.table.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "Apto"))
-import img_rc
+import img
 
 
 if __name__ == "__main__":
